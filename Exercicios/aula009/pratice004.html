@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apredendo JavaScript</title>
+    <style>
+        body {
+            background-color: rgb(122, 123, 194);
+            color: white;
+            font: normal 26.5px Arial;
+        }
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando DOM</h1>
+    <p class="msg" id="m1">mensagem 1</p>
+    <p class="msg" id="m2">mensagem 2</p>
+    <p class="msg" id="m3">mensagem 3</p>
+
+    <script> 
+           var d = window.document.getElementsByTagName('msg')[2]
+            d.style.background = 'green'
+            d.innerText = 'Estou aguardando...'
+    </script>
+
+</body>
+</html>
