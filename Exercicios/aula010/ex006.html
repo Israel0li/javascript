@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 25pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja com o bloco
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+            function clicar() {
+                a.innerText = 'Clicou!!'
+                a.style.background = 'red'
+            }
+            function entrar() {
+                a.innerText = 'Entrou!!'
+                a.style.background = 'blue'
+            }
+            function sair() {
+                a.innerText = 'Saiu!!'
+                a.style.background = 'orange'
+            }
+    </script>
+
+</body>
+</html>
