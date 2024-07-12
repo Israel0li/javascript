@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apredendo JavaScript</title>
+    <style>
+        body {
+            background-color: rgb(122, 123, 194);
+            color: white;
+            font: normal 26.5px Arial;
+        }
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Países do Mundo</h1>
+    Qual é o seu país de Origem: <input type="text" name="txtpais" id="txtpais"> <input type="button" value="Enviar" onclick="clicar()">
+    <p id="res"></p>
+
+    <script> 
+           function clicar() {
+            var país = document.querySelector('input#txtpais')
+            var res = document.getElementById('res')
+            res.innerHTML = `Seu país de origem é ${país.value}, `
+            if (país.value == `Brasil`) {
+                res.innerHTML += 'Você é Brasileiro!'
+            } else {
+                res.innerHTML += 'Você é Estranjeiro!'
+            }
+           }
+    </script>
+</body>
+</html>
