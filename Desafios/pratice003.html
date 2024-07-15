@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apredendo JavaScript</title>
+    <style>
+        body {
+            background-color: rgb(122, 123, 194);
+            color: white;
+            font: normal 26.5px Arial;
+        }
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <script> 
+           var n1 = Number(prompt('Digite um numero'))
+           var n2 = Number(prompt('Digite outro numero'))
+           var res = document.getElementById('res')
+           var s = n1 + n2
+           alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+           res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}`
+    </script>
+</body>
+</html>

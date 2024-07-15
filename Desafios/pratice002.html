@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apredendo JavaScript</title>
+    <style>
+        body {
+            background-color: rgb(122, 123, 194);
+            color: white;
+            font: normal 26.5px Arial;
+        }
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+   <h1>Qual é o seu nome completo?</h1>
+   <input type="text" name="nnome" id="inome" placeholder="Seu primeiro Nome." required> 
+   <input type="text" name="nmeio" id="imeio" placeholder="Seu Segundo Nome." required>
+   <input type="text" name="nsobre" id="isobre" placeholder="Seu Sobrenome." required>
+   <input type="button" value="Enviar" onclick="clicar()">
+   <p id="elo"></p>
+   <p id="res"></p>
+   <p id="res2"></p>
+    
+    <script>
+        function clicar() {
+            var nome = document.getElementById('inome')
+            var meio = window.document.querySelector('input#imeio')
+            var sobre = window.document.querySelector('input#isobre')
+            var res = document.getElementById('res')
+            var res2 = document.getElementById('res2')
+            var elo = document.getElementById('elo')
+            res.innerHTML = `Seu nome é <strong>${nome.value}</strong>, seu segundo nome é <strong>${meio.value}</strong>, e seu sobrenome é <strong>${sobre.value}</strong>.`
+            res2.innerHTML = `Seu nome completo é <strong>${nome.value} ${meio.value} ${sobre.value}</strong>.`
+            elo.innerHTML = 'Você tem um belo Nome!'
+ 
+        }
+    </script>
+</body>
+</html>
