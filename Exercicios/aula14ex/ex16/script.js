@@ -1,28 +1,31 @@
-function carregar() {
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
-    var dia = window.document.getElementById('dia')
-    var dataatt = new Date()
-    var hora = dataatt.getHours()
-    
-    msg.innerHTML = `Agora são ${hora} horas`
+function contar() {
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let res = document.getElementById('res')
 
-    if (hora >= 0 && hora < 12) {
-        //BOM DIA!
-        dia.innerText = 'Bom Dia!'
-        img.src = 'manha2.png'
-        document.body.style.background = '#c17f4f'
-    } else if (hora >= 12 && hora < 18) {
-        //BOA TARDE!
-        
-        dia.innerText = 'Boa Tarde!'
-        img.src = 'tarde2.png'
-        document.body.style.background = '##91bce6'
+    if (ini.value == 0 || fim.value == 0 || passo.value == 0) { 
+        res.innerHTML = 'Impossivel contar!'
+       //window.alert('[ERRO] Impossivel Contar!')
     } else {
-        //BOA NOITE!
-        dia.innerText = 'Boa Noite!'
-        img.src = 'noite250px.png'
-        document.body.style.background = '#30596e'
+        res.innerHTML = 'Contando: '
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        }
+        
+        if (i < f) {
+            // Contagem Crescente
+            for(let c = i; c <= f; c += p) {
+            res.innerHTML += ` ${c} \u{1F449}`
+        }
+            res. innerHTML += `\u{1F3C1}`
+        } else {
+            // Contagem Regressiva
+            for(let c = i; c >= f;c -= p) {
+                res.innerHTML += ` ${c} \u{1F449}`
+            }
+            res. innerHTML += `\u{1F3C1}`
+        }
+        
     }
-}
-
